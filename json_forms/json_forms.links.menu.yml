@@ -1,0 +1,5 @@
+json_forms.admin_new_article:
+  title: Add article
+  description: Form for adding an article.
+  route_name: json_forms.admin_new_article
+  parent: json_forms.admin_get_articles

@@ -1,0 +1,189 @@
+{
+  "name": "3d_article",
+  "description": "Type definition for 3d_article records.",
+  "id" : "",
+  "url": "type:3d_article",
+  "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "http://edan.si.edu/schema/3d_article/content",
+    "type": "object",
+    "properties": {
+      "type": "3d_article",
+      "id": {
+        "id": "http://edan.si.edu/schema/3d_article/id",
+        "type": "string"
+      },
+      "linkedId": {
+        "id": "http://edan.si.edu/schema/3d_article/linkedId",
+        "type": "string"
+      },
+      "unitCode": {
+        "id": "http://edan.si.edu/schema/3d_article/unitCode",
+        "type": "string"
+      },
+      "title": {
+        "id": "http://edan.si.edu/schema/3d_article/title",
+        "type": "string"
+      },
+      "url": {
+        "id": "http://edan.si.edu/schema/3d_article/url",
+        "type": "string"
+      },
+      "content": {
+        "properties": {
+          "title": {
+            "properties": {
+              "content": {
+                "id": "http://edan.si.edu/schema/3d_article/content/title/content",
+                "type": "string"
+              },
+              "extended": {
+                "type": "array",
+                "multiple": true,
+                "properties": {
+                  "label": {
+                    "id": "http://edan.si.edu/schema/extended/type",
+                    "type": "string"
+                  },
+                  "value": {
+                    "id": "http://edan.si.edu/schema/extended/content",
+                    "type": "string"
+                  }                }
+              }
+            }
+          },
+          "version": {
+            "id": "http://edan.si.edu/schema/3d_article/content/version",
+            "type": "string"
+          },
+          "description": {
+            "id": "http://edan.si.edu/schema/3d_article/content/description",
+            "type": "string"
+          },
+          "links": {
+            "id": "http://edan.si.edu/schema/content/links",
+            "type": "array",
+            "multiple": true,
+            "properties": {
+              "content": {
+                "id": "http://edan.si.edu/schema/content/links/content",
+                "type": "string"
+              },
+              "extended": {
+                "id": "http://edan.si.edu/schema/content/links/thumbnail",
+                "type": "array"
+              }
+            }
+          }
+        }
+      },
+      "status": {
+        "id": "http://edan.si.edu/schema/3d_article/status",
+        "type": "integer",
+        "default": 0,
+        "enum": [-1, 0, 1]
+      }
+    },
+    "required": [
+      "title"
+    ]
+  },
+  "authoringForm": {
+    "id": {
+      "label": "Article ID",
+      "ux": {
+        "field_type": "hidden"
+      }
+    },
+    "linkedId": {
+      "label": "Linked ID",
+      "ux": {
+        "field_type": "hidden"
+      }
+    },
+    "unitCode": {
+      "default_value": "OCIO3D",
+      "label": "Unit Code",
+      "ux": {
+        "field_type": "hidden"
+      }
+    },
+    "version": {
+      "default_value": "1",
+      "label": "Version",
+      "ux": {
+        "field_type": "hidden"
+      }
+    },
+    "title": {
+      "label": "Title",
+      "ux": {
+        "field_type": "text"
+      }
+    },
+    "url": {
+      "label": "EDAN Article URL",
+      "ux": {
+        "field_type": "text"
+      }
+    },
+    "description": {
+      "label": "Description",
+      "ux": {
+        "field_type": "textarea"
+      }
+    },
+    "article_type": {
+      "label": "Article Type",
+      "ux": {
+        "field_type": "text"
+      }
+    },
+    "links": {
+      "label" : "Links",
+      "ux": {
+        "field_type": "fieldset"
+      },
+      "fields" : {
+        "content": {
+          "label": "Media URL",
+          "ux": {
+            "field_type": "text"
+          },
+          "help_text": "",
+          "default_value": "",
+          "required": true
+        },
+        "link_text": {
+          "default_value": "",
+          "label": "Link Text",
+          "ux": {
+            "field_type": "hidden"
+          },
+          "help_text": "Text used for this link. If no text is entered, the link itself will be used as the link text."
+        },
+        "link_type": {
+          "label": "Link Type",
+          "ux": {
+            "field_type": "text",
+            "placeholder_text" : ""
+          },
+          "help_text": "",
+          "default_value": ""
+        }
+      }
+    },
+    "status": {
+      "label": "Status",
+      "ux": {
+        "field_type": "radios"
+      },
+      "default_value": 1,
+      "enum":
+      {
+        "0": "published",
+        "1": "un-published"
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+[{
+  "type": "json_article",
+  "id": "3d_model-26",
+  "url": "lincoln-life-mask-volk-laser-scan",
+  "title": "Lincoln Life Mask (Volk) Laser Scan",
+  "unitCode": "3DSI",
+  "linkedId": "",
+  "content": {
+    "parent_model_id": "",
+    "title": "Lincoln Life Mask (Volk) Laser Scan",
+    "version": 1,
+    "flattened_html": "",
+    "tour_data": [],
+    "legacy_data": {
+      "legacy_embed_url": "http://3d.si.edu/explorer?modelid=26",
+      "legacy_edan_unit": "National Portrait Gallery",
+      "legacy_browsable": true,
+      "legacy_tour_embed_urls": ["http://3d.si.edu/tour/looking-leonard-volks-life-mask-abraham-lincoln"],
+      "legacy_file_download_urls": ["http://3d.si.edu/sites/default/files/assets/download/model/26/Lincoln_Volk-point_data.zip", "http://3d.si.edu/sites/default/files/assets/download/model/26/PrintReady_Lincoln_Vaulk-Scale_mm-2M_triangle.zip", "http://3d.si.edu/sites/default/files/assets/download/model/26/PrintReady_Lincoln_Vaulk-Scale_mm-500k_triangle.zip", "http://3d.si.edu/sites/default/files/assets/download/model/26/Lincoln_Vaulk-Scale_mm-1M_triangle.zip", "http://3d.si.edu/sites/default/files/assets/download/model/26/Lincoln_Vaulk-Scale_mm-4M_triangle.zip"]
+    },
+    "collection_data": {
+      "collection_record_id": "",
+      "collection_unit_code": ""
+    },
+    "thumbnail_media": {
+      "media_mime_type": "image/jpeg",
+      "media_url": "http://3d.si.edu/sites/default/files/assets/model/26/lincoln-volk-thum.jpg",
+      "media_width": "256",
+      "media_height": "256",
+      "media_alt": "",
+      "media_title": ""
+    }
+  }
+}, {
+  "type": "json_article",
+  "id": "3d_model-27",
+  "url": "lincoln-life-mask-mills-laser-scan",
+  "title": "Lincoln Life Mask (Mills) Laser Scan",
+  "unitCode": "3DSI",
+  "linkedId": "",
+  "content": {
+    "parent_model_id": "",
+    "title": "Lincoln Life Mask (Mills) Laser Scan",
+    "version": 1,
+    "flattened_html": "",
+    "tour_data": [],
+    "legacy_data": {
+      "legacy_embed_url": "http://3d.si.edu/explorer?modelid=27",
+      "legacy_edan_unit": "National Portrait Gallery",
+      "legacy_browsable": true,
+      "legacy_tour_embed_urls": ["http://3d.si.edu/tour/looking-clark-mills-life-mask-abraham-lincoln"],
+      "legacy_file_download_urls": ["http://3d.si.edu/sites/default/files/assets/download/model/27/Lincoln_LifeMasks_LFP_300dpi.zip", "http://3d.si.edu/sites/default/files/assets/download/model/27/PrintReady_Lincoln_Mills-hollow-Scale_mm.zip", "http://3d.si.edu/sites/default/files/assets/download/model/27/PrintReady_Lincoln_Mills-solid-Scale_mm.zip", "http://3d.si.edu/sites/default/files/assets/download/model/27/Lincoln_Mills-Scale_mm-12M_triangle.zip", "http://3d.si.edu/sites/default/files/assets/download/model/27/Lincoln_Mills-Scale_mm-1M_triangle.zip", "http://3d.si.edu/sites/default/files/assets/download/model/27/Lincoln_Mills-points_data.zip"]
+    },
+    "collection_data": {
+      "collection_record_id": "",
+      "collection_unit_code": ""
+    },
+    "thumbnail_media": {
+      "media_mime_type": "image/jpeg",
+      "media_url": "http://3d.si.edu/sites/default/files/assets/model/27/cc11-thumb.jpg",
+      "media_width": "256",
+      "media_height": "256",
+      "media_alt": "",
+      "media_title": ""
+    }
+  }
+}]
