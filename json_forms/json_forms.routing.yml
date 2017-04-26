@@ -1,7 +1,6 @@
 json_forms.admin_get_all_articles:
   path: '/admin/content/json_articles'
   defaults:
-    #_form: '\Drupal\si3d_edan\Form\AdminModelsForm'
     _controller: '\Drupal\json_forms\Controller\JsonFormsController::viewAllArticlesPage'
     _title: 'View All Json Forms Articles'
   requirements:
@@ -39,4 +38,10 @@ json_forms.view_article:
   requirements:
     _permission: 'view content'
 
-
+json_forms.autocomplete_article_type:
+  path: 'json_forms_taxonomy/autocomplete/article_type'
+  defaults:
+    _controller: '\Drupal\json_forms\Controller\JsonFormsController::autocompleteArticleType'
+    _title: 'Article Autocomplete'
+  requirements:
+    _permission: 'view content'

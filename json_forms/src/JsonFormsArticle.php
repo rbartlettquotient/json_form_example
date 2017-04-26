@@ -64,13 +64,8 @@
 
         $jf = new JsonFormsData();
 
-        $title = $values_array['title'];
-        unset($values_array['content']['title']);
-        $values_array['content']['title']['content'] = $title;
-
         $response = $jf->writeRecord('article', $values_array);
-
-        if(!isset($response->id) || strlen(trim($response->id)) < 1) {
+        if(!array_key_exists('id', $response) || !isset($response['id']) || strlen(trim($response['id'])) < 1) {
           return array(
             'error' => 'An error occurred when attempting to save the article. Your changes may not have been saved.',
             'response' => $response

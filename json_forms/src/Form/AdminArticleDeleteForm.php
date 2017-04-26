@@ -49,31 +49,11 @@ class AdminArticleDeleteForm extends FormBase {
   /**
    * {@inheritdoc}
    */
-  //array &$form, Drupal\Core\Form\FormStateInterface $form_state
-  public function validateForm(array &$form, FormStateInterface $form_state) {
-
-    //@todo given the $form structure and $form_state values
-    // validate the submitted data against the schema.
-    dpm($form);
-    dpm($form_state);
-
-    $article_data = array('something');
-
-
-    $article = new \Drupal\json_forms\JsonFormsArticle(); // use our interface class; connects to EDAN by default
-    $return = $article->validateArticleAgainstSchema($article_data);
-
-  }
-
-
-  /**
-   * {@inheritdoc}
-   */
   public function submitForm(array &$form, FormStateInterface $form_state) {
 
     $article_id = $form_state->getValue('id');
 
-    $article = new \Drupal\json_forms\JsonFormsArticle(); // use our interface class; connects to EDAN by default
+    $article = new \Drupal\json_forms\JsonFormsArticle();
     $return = $article->adminDeleteArticle($article_id);
 
     if(isset($return['error'])) {

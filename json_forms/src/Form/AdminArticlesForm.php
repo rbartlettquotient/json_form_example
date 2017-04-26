@@ -29,10 +29,10 @@ class AdminArticlesForm extends FormBase {
     //@todo- modify tableselect to render properly
     // see https://api.drupal.org/api/drupal/core!lib!Drupal!Core!Render!Element!Tableselect.php/class/Tableselect/8.2.x
 
-    $jf = new \Drupal\json_forms\JsonFormsArticle(); // use our interface class; connects to EDAN by default
+    $jf = new \Drupal\json_forms\JsonFormsArticle();
     $record_values = $jf->adminGetArticles(); // get the articles
 
-    if(isset($record_values['error'])) {
+    if(isset($record_values->error)) {
       drupal_set_message(t("An exception occurred when loading Article records %err.", array('%err' => $record_values['error'])),
       'error');
       return $form;
@@ -41,7 +41,11 @@ class AdminArticlesForm extends FormBase {
     // Build table rows
     if (!empty($record_values)) {
       foreach ($record_values as $k => $row) {
-        $record_id = $row->id;
+        $record_id = isset($row->id) ? $row->id : NULL;
+
+        if(NULL == $record_id) {
+          continue;
+        }
 
         $u = Url::fromRoute('json_forms.view_article', array('article_id' => $record_id));
         $title_link = new Link($row->title, $u);
@@ -79,7 +83,7 @@ class AdminArticlesForm extends FormBase {
 
     $form['add_link'] = array(
       '#type' => 'markup',
-      '#markup' => '<a href="/admin/content/article/add">Add Article</a>',
+      '#markup' => '<a href="/admin/content/json_article/add">Add Article</a>',
     );
 
     // Add table
